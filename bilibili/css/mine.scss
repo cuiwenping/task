@@ -1,0 +1,99 @@
+.main_aboutMe{
+	width: 100%;
+	.mine_visitor{
+		width: 100%;
+		overflow: hidden;
+		padding-top: 20px;
+		dl{
+			width: 100%;
+			overflow: hidden;
+			background: #fff;
+			border-top: 1px solid #e7e7e7;
+			border-bottom: 1px solid #e7e7e7;
+			padding: 10px;
+			dt{
+				float: left;
+				width: 60px;
+				img{
+					width: 100%;
+				}
+			}
+			dd{
+				float: left;
+				margin-left: 20px;
+				.main_visitorName{
+					line-height: 32px;
+				}
+			}
+		}
+	}
+	.main_history{
+		width: 100%;
+		padding-top: 20px;
+		p{
+			width: 100%;
+		}
+		p:nth-child(1){
+			height: 45px;
+			line-height: 45px;
+			background: #fff;
+
+			.icon_group_history{
+				width: 20px;
+				height: 20px;
+				margin: 12px 5px 0 10px;
+				float: left;
+			}
+			span{
+				float: left;
+			}
+			.main_history_to{
+				width: 7px;
+				height: 20px;
+				margin: 18px 15px 0 10px;
+				float: right;
+			}
+			
+		};
+		
+	}
+.icon_group_history{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:-65px -205px;
+}
+.main_history_to{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:-160px -205px;
+}
+		p{
+			height: 45px;
+			color: #999;
+			line-height: 45px;
+			text-align: center;
+		};
+	.main_visitor_login{
+		width: 100%;
+		margin-top: 20px;
+		a{
+			width: 100%;
+			height: 46px;
+			display: block;
+			background: #fff;
+			line-height: 46px;
+			text-align: center;
+			margin:10px 0;
+			border: 1px solid #e7e7e7;
+			border-left: none;
+			border-right: none;
+		}
+		a:nth-child(2){
+			color: #de698c;
+		}
+	}
+}
+.bili_footer{
+	position: fixed;
+	bottom: 0;
+}

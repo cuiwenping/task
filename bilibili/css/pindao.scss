@@ -1,0 +1,87 @@
+#wrap{
+	width:100%;
+	.bili_main{
+		width: 100%;
+		background: #f4f4f4;
+		padding-bottom: 40px;
+		.flex_bar{
+			border-bottom: 1px solid #ccc;
+		}
+		.main_zhibo{
+			width: 100%;
+			overflow: hidden;
+			.main_zhibo_cont{
+				width: 33.3%;
+				float: left;
+				padding-top: 20px;
+				.main_zhibo_con_dl{
+					width: 68px;
+					margin: 0 auto;
+					text-align: center;
+					dt{
+						width: 100%;
+						height: 68px;
+						position: relative;
+						.icon{
+							width: 100%;
+							height: 68px;
+							display: block;
+						}
+						.zhibo_cont_span{
+							width:28px;
+							height: auto;
+							background: #ccc;
+							display: block;
+							position: absolute;
+							top: 0px;
+							right:-3px;
+							color: #fff;
+							border-radius: 8px;
+						}
+					}
+					dd{
+						width: 100%;
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+.icon_group_zhibo{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:-136px 0px;
+}
+.icon_group_fanjus{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:0 0px;
+}
+.icon_group_donghua{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:-68px 0px;
+}
+.icon_group_music{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:0 -68px;
+}
+.icon_group_youxi{
+	background: url("../images/ui_3@2x.png") no-repeat;
+	background-size: 274px auto;
+	background-position:0 -136px;
+}
+
+
+.bili_footer{
+	width: 100%;
+	.footer_list{
+		width: 100%;
+
+	}
+	p{
+		width: 100%;
+	}
+}
