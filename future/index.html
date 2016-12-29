@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>未来应用_最爽神奇</title>
+	<link rel="stylesheet" href="animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="wrap">
+		<div class="slider_box">
+			<section class="slider_page on">
+			 	<img src="image/p0.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p1.png" alt="" class="animated slideInDown"></section>
+			<section class="slider_page">
+			 	<img src="image/p2.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p3.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p4.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p5.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p6.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p7.png" alt="" class="animated slideInDown"></section> 
+			 <section class="slider_page">
+			 	<img src="image/p8.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p9.png" alt="" class="animated slideInDown"></section>
+			 <section class="slider_page">
+			 	<img src="image/p10.png" alt="" class="animated slideInDown"></section> 
+			<!-- 11 输入测试-->
+			<section class="slider_page" data-upPage="false" data-downPage="false">
+				<div class="content">
+					<img src="image/p11.png" class="bg" />
+					<img src="image/input_title.png" class="tip">
+					<div class="text-val"><input type="text" /></div>
+					<button class="name_submit"><img src="image/tijiao.png"></button>
+				</div>		
+			</section>
+			<!-- 12 输出测试结果-->
+			<section class="slider_page resultPage" data-upPage="false" data-downPage="false">			
+					<div class="result_con">
+						<img src="image/pic_bg.png" class="result_bor">
+						<img src="image/pic4.png"  class="result_res">
+						<output class="resultName"></output>
+					</div>
+					<div class="result_btns">
+						<button class="share_btn">
+							<img src="image/share_btn.png" class="share">
+						</button>
+						<button class="again_btn">
+							<img src="image/again.png" class="again">
+						</button>
+						<button class="prize_btn">
+							<img src="image/prize.png" class="prize">
+						</button>
+					</div>			
+			</section>
+			<!-- 13 分享页-->
+			<section class="slider_page sharePage" data-upPage="false" data-downPage="false">
+				<img src="image/share_pic.png" alt="">
+			</section>
+			<!-- 14 抽奖页-->
+			<section class="slider_page prizePage" data-upPage="false" data-downPage="false">
+				<div class="prizeCont">
+					<img src="image/choujiang_bg.png" alt="" class="prize_bg">
+					<img src="image/choujiang_btn.png" alt="" class="prize_btn">
+					<img src="image/kuang.png" alt="" class="prize_border">
+
+				</div>
+			</section>	
+		</div>
+		<img src="image/next.png" class="slide-tip animated fadeInDown infinite">
+	</div>
+	<script src="zepto.min.js"></script>
+	<script>
+		var sliderUp=true,
+			sliderDown=true;
+		$("#wrap").on("swipeUp",function(){
+			var index=$(this).find(".on").index()+1;
+			if (index>$(".slider_page").length) {
+				return false;
+			}
+			//console.log(index)
+			if( !sliderUp ) return;
+			sliderPic(index)
+		})
+		$("#wrap").on("swipeDown",function(){
+			var index=$(this).find(".on").index()-1;
+			if (index<=0) {
+				return false;
+			}
+			if( !sliderDown ) return;
+			sliderPic(index)
+		})
+
+		/*图片滚动*/
+		function sliderPic(ind){
+			$('.slider_box').animate({"-webkit-transform":"translateY(-"+100*ind+"%)"},500,"line",function(){
+				$(this).find("section").eq(ind).addClass('on').siblings().removeClass("on")
+			})
+			if ($(".slider_box section").eq(ind).attr("data-upPage")=="false") {
+				sliderUp=false;
+				$(".slide-tip ").hide()
+			}else{
+				sliderUp=true;
+				$(".slide-tip ").show()
+			}
+			if ($(".slider_box section").eq(ind).attr("data-downPage")=="false") {
+				sliderDown=false;
+				$(".slide-tip ").hide()
+			}else{
+				sliderDown=true;
+				$(".slide-tip ").show()
+			}
+		}
+
+		$(".name_submit").on("tap",function(){
+			var val=$(".text-val input").val()
+			sliderPic(12)
+		})
+		$(".name_submit").on("click",function(){	
+			var name=$(".text-val input").val();
+			console.log(name)	
+			$(".result_con .resultName").text(name)
+			/*随机数*/
+			var randons=parseInt(Math.random()*10)+1;
+			$(".result_res").attr("src","image/b"+randons+".png")
+		})
+
+		$(".result_btns .share_btn").on("tap",function(){
+			sliderPic(13);
+			$(".sharePage").css({"background":"#000"})
+		})
+
+		$(".result_btns .again_btn").on("tap",function(){
+			sliderPic(11);
+		})
+
+		$(".result_btns .prize_btn").on("tap",function(){
+			sliderPic(14);
+		})
+	
+		$(".prize_btn").on("click",function(){
+			$(".prize_border").css({" -webkit-animation":"borders 2s both linear"})
+		})
+		
+	</script>
+</body>
+</html>
