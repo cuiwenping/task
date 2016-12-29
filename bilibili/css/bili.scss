@@ -1,0 +1,341 @@
+#wrap{
+	width:100%;
+	font-size: 62.5%;
+}
+a{
+	color: #000;
+}
+.bili_header_bar{
+	width: 100%;
+	height:40px;
+	line-height: 40px;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	.icon_group{
+		width: 100%;
+		height: 100%;
+		display: -webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+	}
+	.left_icon_group{
+		padding-left: 10px;
+		width: 63px;
+		float: left;
+		display: inline-block;
+		.logo{
+			width: 100%;
+			height: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.right_icon_group{
+		float: right;
+		width:100px;
+		margin-right: -10px;
+		display: inline-block;
+		a{
+			width: 44px;
+			height: 100%;
+			display: block;
+			float: left;
+			display: -webkit-box;
+			-webkit-box-align:center;
+		}
+			a:nth-child(1) i{
+				width:22px;
+				height: 22px;
+				display: block;
+				background: url("../images/ui_3@2x.png");
+				background-size:274px auto; 
+				background-position:0 -205px;
+			}
+			a:nth-child(2) i{
+				width:22px;
+				height: 22px;
+				display: block;
+				background: url("../images/ui_3@2x.png");
+				background-size:274px auto; 
+				background-position:-22px -205px;
+			}
+		
+
+	}
+}
+	
+	.icon{
+		display: block;	
+		width: 22px;
+		height:22px;
+		float: left;	
+		background: url("../images/index@2x.png") no-repeat;	
+		background-size:30px auto; 
+	}
+	.icon_group_nums{
+		background-position:0 -420px;
+	}
+	.icon_group_danmu{
+		background-position:0 -442px;
+	}
+	.icon_group_live{
+		background-position:0 -153px;
+	}
+	.icon_group_arrow{
+		background-position:0 -391px;
+	}	
+.bili_main{
+	width: 100%;
+	background: #f4f4f4;/* 
+	padding-bottom: 20px; */
+	overflow: hidden;
+	.nav{
+		width: 100%;
+		height: 40px;
+		background: #fff;
+		.flex_bar_in{
+			width: 100%;
+			height: 100%;
+			li{
+				width: 20%;
+				float: left;
+				text-align: center;
+				line-height: 2rem;
+				font-size: 0.8rem;
+				a{
+					width: 80%;
+					display: inline-block;
+					color: #444;
+					height: 2rem;
+				}
+				.visited{
+					border-bottom:2px solid #de698c;
+				}
+			}
+		}
+	}
+	.main_sliderWrap{
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		.mian_slider_list{
+			width: 400%;
+			height: 100%;
+			position: absolute;
+			overflow: hidden;
+			li{
+				width: 25%;
+				float: left;
+			}
+			a{
+				width: 100%;
+				height: 100%;
+				display: block;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.main_hot{
+		width: 100%;
+		font-size:0.8rem;
+		margin-top: 10px;
+		h3{
+			width: 100%;
+			height: 44px;
+			background: #fff;
+			overflow: hidden;
+			.icon_group{
+				padding: 0 5px;
+				height: 44px;
+				line-height: 44px;
+				display: block;	
+				span{
+					color: #000;
+					font-weight: normal;
+				}		
+				.hot_on{
+					color:#eccc33; 
+				}	
+			}
+			.left_icon_group{
+				float: left;
+				i{
+					width: 30px;
+					height: 80%;
+					float: left;
+					display: inline-block;
+					background: url("../images/index@2x.png") no-repeat;
+					background-size:30px auto; 
+					background-position:0 -205px;
+				}
+
+			}
+			.right_icon_group{
+				float: right;
+				padding-right: 10px;
+				i{
+					width: 30px;
+					height: 80%;
+					float: left;
+					display: inline-block;
+					background: url("../images/index@2x.png") no-repeat;
+					background-size:30px auto; 
+					background-position:0 -55px;
+				}
+			}
+		}
+		.main_hot_content,.main_fanju_content{
+			width: 96%;
+			padding: 0 2%;
+			background: #fff;
+			overflow: hidden;
+
+			.hot_content_li{
+				width: 49%;
+				float: left;
+				padding: 5px 0;				
+			}
+			.hot_content_li:nth-child(odd){
+				padding-right: 2%;
+			}
+
+			.main_hot_img{
+					width: 100%;
+					border-radius:5px;
+					overflow: hidden;
+					img{
+						width: 100%;
+					}
+				}
+			.main_hot_dl{
+					width: 100%;
+					position: relative;
+					.main_hot_dl_dt{
+						position: absolute;
+						top: -20px;
+						left: 10px;
+						h4{
+							width: 42px;
+							height: 42px;
+							border-radius: 22px;
+							overflow: hidden;
+							img{
+								width: 100%;
+							}
+						}
+						p{
+							width: 42px;
+							height:18px;
+							background: #eee;
+							text-align: center;
+							border-radius: 5px;
+							margin-top: 8px;
+							color: #fff;
+						}
+					}
+					.main_hot_dl_dd{
+						width: 100%;
+						padding-left: 40%;
+						max-height: 48px;
+						h4{
+							font-weight: normal;
+							line-height: 24px;
+						}
+						p{
+							overflow:hidden;
+							text-overflow: ellipsis;
+							-o-text-overflow:ellipsis;
+							width: 80%;
+							white-space: nowrap;
+							line-height: 24px;
+							color: #999;
+						}
+					}
+				}
+				.main_hot_title{
+					width: 100%;
+					max-height: 2rem;
+					line-height: 2rem;
+					overflow: hidden;
+				}
+				.meta{
+					width: 100%;
+					height: 1rem;
+					li{
+						width: 50%;
+						float: left;
+
+					}
+				}
+
+			.fanju_content_li{
+				width: 33.3%;
+				float: left;
+				padding: 10px 0;
+				box-sizing:border-box;
+				.main_fanju_dl{
+					width: 100%;
+					.main_fanju_dl_dd{
+						width: 100%;
+						h4{
+							width: 100%;
+							height: 2rem;
+							font-weight: normal;
+							line-height:2rem;
+							text-align: center;
+						}
+						p{
+							width: 100%;
+							text-align: center;
+							overflow:hidden;
+							text-overflow: ellipsis;
+							-o-text-overflow:ellipsis;
+							width: 100%;
+							white-space: nowrap;
+							line-height: 1rem;
+							color: #df698c;
+						}
+					}
+				}
+			}
+			.fanju_content_li:nth-child(3n-2){
+				padding-left: 0;
+				padding-right: 10px; 
+			}
+			.fanju_content_li:nth-child(3n-1){
+				padding-left: 5px;
+				padding-right: 5px; 
+			}
+			.fanju_content_li:nth-child(3n){
+				padding-left: 10px;
+				padding-right: 0; 
+			}
+		}
+	}
+
+}
+.bili_footer{
+	width: 100%;
+	background: #f4f4f4;
+	.footer_list{
+		width: 100%;
+		height: 36px;
+		li{
+			width: 33.3%;
+			float: left;
+			text-align: center;
+			line-height: 36px;
+		}
+
+	}
+	.footer_p{
+		width: 100%;
+		text-align: center;
+		height: 32px;
+		line-height: 32px;
+		color: #aaa;
+	}
+}
